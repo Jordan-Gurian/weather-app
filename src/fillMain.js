@@ -9,6 +9,6 @@ export default function fillMain(weather) {
     condition.textContent = weather.condition;
     maxTemp.textContent = weather.forecastdays[0].maxTempF;
     minTemp.textContent = weather.forecastdays[0].minTempF;
-    feelsLike.textContent = weather.feelsLikeF;
+    feelsLike.textContent = `Feels like ${weather.feelsLikeF}`;
 
 }
