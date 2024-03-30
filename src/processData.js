@@ -19,13 +19,15 @@ export default function processData(response) {
         obj.date = item.date;
         obj.maxTempC = item.day.maxtemp_c;
         obj.maxTempF = item.day.maxtemp_f;
+        obj.minTempC = item.day.mintemp_c;
+        obj.minTempF = item.day.mintemp_f;
         obj.chanceRain = item.day.daily_chance_of_rain;
         obj.sunrise = item.astro.sunrise;
         obj.sunset = item.astro.sunset;
         days.push(obj);
     })
 
-    processedData.forcastdays = days;
+    processedData.forecastdays = days;
 
     return processedData
 
