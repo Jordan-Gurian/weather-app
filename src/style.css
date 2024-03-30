@@ -1,0 +1,50 @@
+:root {
+    --standard-gap: 10px;
+    --standard-padding: 20px;
+    --background-main: yellow;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 3fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+form {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    padding: var(--standard-padding);
+    width: 100%
+}
+
+.location-date {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-gap);
+    align-items: center;
+    padding: var(--standard-padding);
+    width: 100%
+}
+
+.today-main {
+    background-color: var(--background-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--standard-gap);
+    padding: var(--standard-padding);
+    width: 100%
+}
+
+.today-lower {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%
+}
