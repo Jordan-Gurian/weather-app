@@ -2,7 +2,7 @@ import "./style.css";
 import "normalize.css";
 import wrapProcess from './wrapProcess';
 
-const FORECAST_DAYS = 2;
+const FORECAST_DAYS = 5;
 wrapProcess('london', FORECAST_DAYS);
 
 const form = document.querySelector('form');

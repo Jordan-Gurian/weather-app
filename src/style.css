@@ -6,7 +6,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 1fr 4fr 3fr 1fr 3fr;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr 2fr;
     grid-template-columns: 1fr;
     justify-items: center;
 }
@@ -18,6 +18,8 @@ form {
     padding: var(--standard-padding);
     width: 100%
 }
+
+
 
 .location-date {
     background-color: antiquewhite;
@@ -57,4 +59,44 @@ form {
     justify-items: center;
     align-items: center;
     width: 100%
+}
+
+.forecast {
+    display: flex;
+    gap: var(--standard-gap);
+    padding: var(--standard-padding);
+    background-color: blue;
+    width: 100%;
+    justify-content: center;
+}
+
+.day {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: var(--standard-gap);
+    padding: var(--standard-padding);
+    background-color: pink;
+}
+
+.day > .date {
+    grid-column: 1 / -1;
+}
+
+.day > .condition {
+    grid-template-columns: 2 / -1;
+}
+
+.day > .max.temp-label,
+.day > .max-temp {
+    grid-column: 2 / 3;
+}
+
+.day > .min.temp-label,
+.day > .min-temp {
+    grid-column: 3 / -1;
+}
+
+.day > .chance-rain {
+    grid-column: 2 / 3;
 }
